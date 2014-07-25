@@ -1,0 +1,190 @@
+!!!
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}/
+    %title Jimmy's Urban Bar and Grill
+    %meta{:content => "", :name => "description"}/
+    %link{:href => "images/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "stylesheets/nivo-slider.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "javascripts/fancybox/jquery.fancybox-1.3.4.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "stylesheets/limon.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "stylesheets/colors/orange.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "javascripts/jquery-1.6.2.js", :type => "text/javascript"}
+    %script{:src => "javascripts/jquery-ui-1.8.14.js", :type => "text/javascript"}
+    %script{:src => "javascripts/jquery.nivo.slider.js", :type => "text/javascript"}
+    %script{:src => "javascripts/fancybox/jquery.fancybox-1.3.4.pack.js", :type => "text/javascript"}
+    %script{:src => "javascripts/global.js", :type => "text/javascript"}
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41884879-1', 'lodojimmys.com');
+      ga('send', 'pageview');
+
+  %body
+    / Start Page Container
+    #container_wrap
+      / Start Header
+      #header
+        / Start Logo
+        .logo
+          %img{:alt => "", :src => "images/logo.png"}/
+          / Start Navigation
+          %ul#nav
+            %li
+              %a{:href => "index.html"} Home
+            %li
+              %a{:href => "about_us.html"} About Us
+            %li.active
+              %a{:href => "menu_3.html"} Menu
+              %ul
+                %li
+                  %a{:href => "menu_4.html"} Brunch Menu
+                %li
+                  %a{:href => "menu_3.html"} Regular Menu
+            %li
+              %a{:href => "location.html"} Location
+            %li
+              %a{:href => "Contact.html"} Contact
+          / End Navigation
+        / End Logo
+      / End Header
+      / Start Page Content
+      #items.accordion.main_content
+        .page_heading
+          %h1 Brunch Menu
+          %h2
+            Served Saturday and Sunday from 10am to 3pm.
+            %h3
+              Visit
+              %a{:href => "menu_3.html"} here
+              for our Regular Menu.
+        .heading
+          .content
+            %h2
+              Drink It
+              %span
+          %a.toggle{:href => "javascript:;"} Menu Choices
+        .content
+          %ul
+            %li
+              %h4 Bottomless Mimosas
+              %b $10
+            %li
+              %h4 Chef Crafted Heirloom Infused Bloody Mary
+              %b $7
+            %li.last
+              %h4 ManMosa
+              %b $7
+          %ul.last
+            %li.last
+              %h4 Bartender's choice shot
+              %b $5
+        .heading
+          .content
+            %h2 Start It
+          %a.toggle.down{:href => "javascript:;"} Menu Choices
+        .content
+          %ul.last
+            %li
+              %h4 Whiskey Maple Donuts.
+              %p Housemade donuts - crown maple syrup - grand marníer syrup.
+              %b $4
+            %li.last
+              %h4 Chicken & Waffle Bites
+              %p Pork Belly waffle - fried chicken bites - crown maple syrup.
+              %b $6
+        .heading
+          .content
+            %h2 Pick It Up
+            %p Choice of fries, roasters or sweet potato puffs
+          %a.toggle.down{:href => "javascript:;"} Menu Choices
+        .content
+          %ul.last
+            %li
+              %h4 Green Eggs and Lamb
+              %p Croissant - fried egg - gyro - heirloom tomato - pesto goat cheese.
+              %b $9
+            %li
+              %h4 Nacho Burger
+              %p 1/2lb Burger - chorizo - green chili - pepperjack mornay - black bean - fresh jalepeno.
+              %b $12
+            %li.last
+              %h4 Hangover Cure
+              %p 1/2lb Burger - fried egg - house cured bacon - cheddar cheese - Crown maple peanut butter.
+              %b $11
+        .heading
+          .content
+            %h2 Lighten Up
+          %a.toggle.down{:href => "javascript:;"} Menu Choices
+        .content
+          %ul.last
+            %li.last
+              %h4 California Benedict
+              %p Croissant - 2 poached eggs - spinach - heirloom tomato - avocado - pepperjack mornay.
+              %b $9
+        .heading
+          .content
+            %h2 Fork It
+          %a.toggle.down{:href => "javascript:;"} Menu Choices
+        .content
+          %ul
+            %li
+              %h4 Smoked Brisket Hash
+              %p House smoked brisket - peppers & onions - over easy egg - fried onions.
+              %b $9
+            %li
+              %h4 Pork Belly Waffle
+              %p Pork belly stuffed Belgian waggle - grand marníer maple syrup - whipped cream.
+              %b $8
+            %li.last
+              %h4 Red Velvet Pancake
+              %p Three red velvet pancakes topped with maple syrup and whipped cream.
+              %b $8
+          %ul.last
+            %li
+              %h4 Breakfast Burrito
+              %p Chorízo - 3 eggs - black beans - jalapenos - roasted potatoes - chipotle wrap - green chili - melaguta creme fresche.
+              %b $10
+            %li
+              %h4 Salmon Migas
+              %p Chooped salmon - caramelized onion - corn tortilla - scrambled eggs - goat cheese - green chili.
+              %b $10
+            %li.last
+              %h4 Memphis Benedict
+              %p Croíssant - slow smoked pork - caramelized onion - poached eggs - pepperjack mornay.
+              %b $9
+        .heading
+          .content
+            %h2 Sides
+          %a.toggle.down{:href => "javascript:;"} Menu Choices
+        .content
+          %ul
+            %li
+              %h4 Croissant
+              %b $2
+            %li
+              %h4 Toast
+              %b $2
+            %li.last
+              %h4 Bacon
+              %b $3
+          %ul.last
+            %li
+              %h4 Two Eggs
+              %b $3
+            %li
+              %h4 Roasters
+              %b $3
+            %li.last
+              %h4 Sweet Puffs
+              %b $3
+        / End Page Content
+        / Start Footer
+        #footer
+          .left
+            %p Copyright &copy; Jimmy's Urban Bar and Grill 2013. All Rights Reserved.
+        / End Footer
+      / End Page Container

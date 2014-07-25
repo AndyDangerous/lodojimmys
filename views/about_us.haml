@@ -1,0 +1,106 @@
+!!!
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}/
+    %title Jimmy's Urban Bar and Grill
+    %meta{:content => "", :name => "description"}/
+    %link{:href => "images/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "stylesheets/nivo-slider.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "javascripts/fancybox/jquery.fancybox-1.3.4.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "stylesheets/limon.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "stylesheets/colors/orange.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "javascripts/jquery-1.6.2.js", :type => "text/javascript"}
+    %script{:src => "javascripts/jquery-ui-1.8.14.js", :type => "text/javascript"}
+    %script{:src => "javascripts/jquery.nivo.slider.js", :type => "text/javascript"}
+    %script{:src => "javascripts/fancybox/jquery.fancybox-1.3.4.pack.js", :type => "text/javascript"}
+    %script{:src => "javascripts/global.js", :type => "text/javascript"}
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41884879-1', 'lodojimmys.com');
+      ga('send', 'pageview');
+
+  %body
+    / Start Page Container
+    #container_wrap
+      / Start Header
+      #header
+        / Start Logo
+        .logo
+          %img{:alt => "", :src => "images/logo.png"}/
+          / Start Navigation
+          %ul#nav
+            %li
+              %a{:href => "index.html"} Home
+            %li.active
+              %a{:href => "about_us.html"} About Us
+            %li
+              %a{:href => "menu_3.html"} Menu
+              %ul
+                %li
+                  %a{:href => "menu_4.html"} Brunch Menu
+                %li
+                  %a{:href => "menu_3.html"} Regular Menu
+            %li
+              %a{:href => "location.html"} Location
+            %li
+              %a{:href => "contact.html"} Contact
+          / End Navigation
+        / End Logo
+      / End Header
+      / Start Page Content
+      #our_story.main_content
+        .page_heading
+          %h1 About Us
+        .small_left_column
+          .image_wrap
+            %img{:alt => "", :src => "images/content/our_story-main.jpg"}/
+          %h3 Simple Yet Creative
+          %p Dishes from our exhibition kitchen, are sure to stimulate the most sophisticated palette. Jimmy’s Urban Bar and Grill  features Killer Cuisine; house smoked meats, and pork belly bacon, fresh gourmet burgers , amazing fried chicken sandwiches, creative vegetarian offerings, entrée sized salads and five star taste on a two star budget. Killer Cocktails  and Craft Beers on Tap. Our new bar with its magnificent selection of specialty drinks, martinis and a delightful outdoor patio area create an urban ambiance second to none. Jimmy’s Urban Bar and Grill serves lunch, Happy Hour Specials, Saturday / Sunday brunch  and monthly seasonal dinner menu . In addition  with our outside catering team (Urban Chefs Catering) we are able to cater functions offsite for any number of people.
+          %h3 Our Philosophy
+          %p To sell delicious and remarkable food and drinks . That the food and beverages we sell meets the highest standards of quality , freshness and seasonality and combines both modern creative and traditional styles of cooking. Ton consistently provide our customers with impeccable service in a clean and comfortable environment. To have every customer who visits our restaurant to leave impressed by Jimmy’s Urban Bar & Grill and be excited to come back soon.
+        #sidebar.large_right_column
+          #the_team.container
+            %h3 The Team
+            .content
+              .team_detail
+                .photo
+                  %img{:alt => "", :src => "images/content/our_story-person_1.jpg"}/
+                .bio
+                  %strong Jimmy Bernat
+                  %p Owner / Chef
+          /
+            <div id="facts" class="container">
+            <h3>Fun Facts</h3>
+            <div class="content">
+            <ul>
+            <li>Founded in 2013</li>
+            </ul>
+            </div>
+            </div>
+          #reviews.container
+            %h3 Reviews
+            .content
+              #review-1.review
+                %blockquote Great food! Great atmosphere! Definitely go back!
+              #review-2.review
+                %blockquote We only had the Mules, but they were delicious. The service was good and the owner is pretty friendly and will chat you up for awhile if they're not too busy. Plus it's a great addition to a neighborhood full of Mexican food, Sushi places and Pizza.
+              #review-3.review
+                %blockquote Called in and ordered to-go and was so pleasantly surprised! The food was great and the service on the phone and when we picked up was too. The BBQ is great! Welcome to the neighborhood guys!
+              %ul
+                %li
+                  %a{:href => "#review-1"} 1
+                %li
+                  %a{:href => "#review-2"} 2
+                %li
+                  %a{:href => "#review-3"} 3
+      / End Page Content
+      / Start Footer
+      #footer
+        .left
+          %p Copyright &copy; Jimmy's Urban Bar and Grill 2013. All Rights Reserved.
+      / End Footer
+    / End Page Container

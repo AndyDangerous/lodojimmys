@@ -3,7 +3,7 @@ require 'pony'
 require 'bundler'
 require 'haml'
 Bundler.require
-require_relative 'business_logic/contact'
+require_relative 'business_logic/contact_us'
 
 class JimmysApp < Sinatra::Base
   set :method_override, true

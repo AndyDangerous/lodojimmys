@@ -4,11 +4,14 @@ Bundler.require
 
 class JimmysApp < Sinatra::Base
   set :method_override, true
-  # set :root, 'lib/app'
   set :public_folder, 'public'
 
   configure :development do
     register Sinatra::Reloader
+  end
+  
+  configure do
+    enable :sessions
   end
 
   not_found do
@@ -38,4 +41,32 @@ class JimmysApp < Sinatra::Base
   get '/contact' do
     haml :contact
   end
+
+  get '/login' do
+    haml :login
+  end
+
+  post '/login' do
+    authenticate!
+    redirect '/admin/dashboard'
+  end
+  
+  get '/admin/dashboard' do
+    haml :admin_dashboard
+  end
+
+  get '/logout' do
+    session[:user] = nil
+    redirect '/'
+  end
+
+  helpers do
+    def authenticate!
+      if params[:user] == "admin" && params[:password] == "password"
+        session[:user] == "admin"
+      end
+    end
+  end
+  
+  
 end

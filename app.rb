@@ -50,13 +50,13 @@ class JimmysApp < Sinatra::Base
   post '/login' do
     authenticate!
     if session[:user] == "admin"
-      redirect '/admin/dashboard'
+      redirect '/admin_dashboard'
     else
       redirect '/login'
     end
   end
 
-  get '/admin/dashboard' do
+  get '/admin_dashboard' do
     login_helper(:admin_dashboard)
   end
 

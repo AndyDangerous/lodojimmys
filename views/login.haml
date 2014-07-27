@@ -1,2 +1,4 @@
-%form{:action => "/login", :method => "post"}
-  %label{:for => "user"} Username:  %input{:name => "user", :required => "required", :placeholder => "Username", :type => "text"}/  %br/  %label{:for => "password"} Password:  %input{:name => "password", :required => "required", :placeholder => "Password", :type => "password"}/  %input{:type => "submit", :value => "Login"}/
+#login.main_content
+  %h2 Login:
+  %form{:action => "/login", :method => "post"}
+    %label{:for => "user"} Username:    %input{:name => "user", :required => "required", :placeholder => "Username", :type => "text"}/    %br/    %label{:for => "password"} Password:    %input{:name => "password", :required => "required", :placeholder => "Password", :type => "password"}/    %input{:type => "submit", :value => "Login"}/

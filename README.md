@@ -6,4 +6,3 @@ To Do!
 [ ] database
 [ ] edit menu
 [ ] add photo upload to email contact us
-

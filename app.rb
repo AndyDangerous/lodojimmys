@@ -1,7 +1,9 @@
 require 'pry'
+require 'pony'
 require 'bundler'
 require 'haml'
 Bundler.require
+require_relative 'business_logic/contact'
 
 class JimmysApp < Sinatra::Base
   set :method_override, true
@@ -10,7 +12,7 @@ class JimmysApp < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
-  
+
   configure do
     enable :sessions
   end
@@ -45,6 +47,11 @@ class JimmysApp < Sinatra::Base
 
   get '/login' do
     haml :login
+  end
+
+  post '/contact' do
+    ContactUs.new(params)
+    redirect '/'
   end
 
   post '/login' do

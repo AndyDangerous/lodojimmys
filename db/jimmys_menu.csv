@@ -1,4 +1,4 @@
-Primary_Key,Menu,Category,Name,Description,Price
+id,menu,category,name,description,price
 1,Brunch,Drink It,Bottomless Mimosas,,10
 2,Brunch,Drink It,Chef Crafted Heirloom Infused Bloody Mary,,7
 3,Brunch,Drink It,ManMosa,,7

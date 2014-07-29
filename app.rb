@@ -2,8 +2,10 @@ require 'pry'
 require 'pony'
 require 'bundler'
 require 'haml'
+require 'csv'
 Bundler.require
 require_relative 'business_logic/contact'
+require_relative 'business_logic/menu_db'
 
 class JimmysApp < Sinatra::Base
   set :method_override, true
@@ -19,6 +21,10 @@ class JimmysApp < Sinatra::Base
 
   not_found do
     haml :error
+  end
+
+  get '/test' do
+    haml :test
   end
 
   get '/' do

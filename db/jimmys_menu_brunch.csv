@@ -1,0 +1,23 @@
+id,menu,category,name,description,price
+1,Brunch,Drink It,Bottomless Mimosas,,10
+2,Brunch,Drink It,Chef Crafted Heirloom Infused Bloody Mary,,7
+3,Brunch,Drink It,ManMosa,,7
+4,Brunch,Drink It,Bartender’s Choice Shot,,5
+5,Brunch,Start It,Whiskey Maple Donuts,Housemade donuts - crown maple syrup - grand marníer syrup.,4
+6,Brunch,Start It,Chicken & Waffle Bites,Pork Belly waffle - fried chicken bites - crown maple syrup.,6
+7,Brunch,Pick It Up,Green Eggs and Lamb,Croissant - fried egg - gyro - heirloom tomato - pesto goat cheese.,9
+8,Brunch,Pick It Up,Nacho Burger,1/2lb Burger - chorizo - green chili - pepperjack mornay - black bean - fresh jalepeno.,12
+9,Brunch,Pick It Up,Hangover Cure,1/2lb Burger - fried egg - house cured bacon - cheddar cheese - Crown maple peanut butter.,11
+10,Brunch,Lighten Up,California Benedict,Croissant - 2 poached eggs - spinach - heirloom tomato - avocado - pepperjack mornay.,9
+11,Brunch,Fork It,Smoked Brisket Hash,House smoked brisket - peppers & onions - over easy egg - fried onions.,9
+12,Brunch,Fork It,Pork Belly Waffle,Pork belly stuffed Belgian waggle - grand marníer maple syrup - whipped cream.,8
+13,Brunch,Fork It,Red Velvet Pancake,Three red velvet pancakes topped with maple syrup and whipped cream.,8
+14,Brunch,Fork It,Breakfast Burrito,Chorízo - 3 eggs - black beans - jalapenos - roasted potatoes - chipotle wrap - green chili - melaguta creme fresche.,10
+15,Brunch,Fork It,Salmon Migas,Chooped salmon - caramelized onion - corn tortilla - scrambled eggs - goat cheese - green chili.,10
+16,Brunch,Fork It,Memphis Benedict,Croíssant - slow smoked pork - caramelized onion - poached eggs - pepperjack mornay.,9
+17,Brunch,Sides,Croissant,,2
+18,Brunch,Sides,Toast,,2
+19,Brunch,Sides,Bacon,,3
+20,Brunch,Sides,Two Eggs,,3
+21,Brunch,Sides,Roasters,,3
+22,Brunch,Sides,Sweet Puffs,,3

@@ -26,11 +26,13 @@ class MenuDB
   end
 
   def menu_brunch
-    database.where(:menu => 'Brunch')
+    brunch = database.where(:menu => 'Brunch')
+    brunch.map { |e| e[:category] }.uniq
   end
 
   def menu_regular
-    database.where(:menu => 'Regular')
+    regular = database.where(:menu => 'Regular')
+    regular.map { |e| e[:category] }.uniq
   end
 
   def add(data)

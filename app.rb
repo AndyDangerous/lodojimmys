@@ -13,10 +13,6 @@ class JimmysApp < Sinatra::Base
   set :method_override, true
   set :public_folder, 'public'
 
-  configure :development do
-    register Sinatra::Reloader
-  end
-
   configure do
     enable :sessions
   end
@@ -58,7 +54,7 @@ class JimmysApp < Sinatra::Base
   end
 
   post '/contact' do
-    ContactUs.new(params)
+    ContactUs.new(params[:contact])
     redirect '/'
   end
 

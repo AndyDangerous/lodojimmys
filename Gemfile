@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'sinatra', require: 'sinatra/base'
-gem 'sinatra-contrib', require: 'sinatra/reloader'
 gem 'haml', require: 'haml'
 gem 'geocoder'
-gem 'pry'
 gem 'pony'
 gem 'sequel'
 gem 'sqlite3'
+gem 'carrierwave'
+
+group :development do
+  gem 'shotgun'
+  gem 'pry'
+end

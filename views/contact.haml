@@ -5,21 +5,21 @@
   .small_left_column
     %p We are happy to hear from you. Please fill in the information below and we will get back to you shortly.
     .notice
-    %form#contact_form{:action => "/contact", :method => "post"}
+    %form#contact_form{:action => "/contact", :method => "post", :enctype => 'multipart/form-data', :role => "form"}
       .row
         %p
           %label Your Name
-          %input.text_field{:name => "name", :type => "text"}/
+          %input.text_field{:name => "contact[name]", :type => "text"}/
         %p
           %label Your Email
-          %input.text_field{:name => "email", :type => "email"}/
+          %input.text_field{:name => "contact[email]", :type => "email"}/
       .row
         %p
           %label Your Phone Number
-          %input.text_field{:name => "phone", :type => "text"}/
+          %input.text_field{:name => "contact[phone]", :type => "text"}/
         %p
           %label Subject
-          %select.text_field{:name => "subject"}
+          %select.text_field{:name => "contact[subject]"}
             %option Select a subject...
             %option General
             %option Complaint
@@ -27,7 +27,10 @@
             %option Employment
       %p
         %label Message / Question
-        %textarea.text_field{:cols => "10", :name => "message", :rows => "10"}
+        %textarea.text_field{:cols => "10", :name => "contact[message]", :rows => "10"}
+      %p
+        %label Attachment
+        %input.text_field{:name => "contact[attachment]", :type => "file"}
       %input.button{:type => "submit", :value => "Send Message"}/
   / end left column
   #sidebar.large_right_column

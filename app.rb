@@ -80,6 +80,22 @@ class JimmysApp < Sinatra::Base
     redirect '/'
   end
 
+  get '/menu_2' do
+    haml :menu_2
+  end
+
+  # get '/edit/:item_id' do |item_id|
+  #   login_helper(:edit, item_id)
+  # end
+
+
+  #edit form:
+    # get '/edit/:id' do |id|
+    #   idea = IdeaStore.find(id.to_i)
+    #   erb :edit, locals: {id: id, idea: idea}
+    # end
+
+
   helpers do
     def authenticate!
       if params[:user] == "admin" && params[:password] == "password"
@@ -91,7 +107,7 @@ class JimmysApp < Sinatra::Base
       session[:user] == "admin" ? true : false
     end
 
-    def login_helper(address)
+    def login_helper(address, item_id = nil)
       if authenticated?
         haml address
       else

@@ -14,6 +14,11 @@
     %a.toggle{:href => "javascript:;"} Menu Choices
   .content
     %ul
+      -MenuDB.new.database.where(:category => 'Shared Bites').each do |menu_item|
+        %li
+          %h4=menu_item[:name]
+          %p=menu_item[:description]
+          %b=menu_item[:price]
       %li
         %h4 Fried Bison Ravioli
         %p Packed with bison and herbs, served with our Heirloom tomato marinara.

@@ -1,0 +1,8 @@
+.heading
+  .content
+    %h2="#{category}"
+  %a.toggle.down{:href => "javascript:;"} Menu Choices
+.content
+  %ul
+    -MenuDB.new.menu_items("#{category}").each do |menu_item|
+      =haml :menu_item, locals: {menu_item: menu_item}

@@ -1,3 +1,18 @@
-%ul
-  -MenuDB.new.database.each do |r|
-    %li=r[:name]
+.heading
+  .content
+    %h2="Drink It"
+  %a.toggle.down{:href => "javascript:;"} Menu Choices
+.content
+  %ul
+    -MenuDB.new.menu_items("Drink It").each do |menu_item|
+      =haml :menu_item, locals: {menu_item: menu_item}
+
+
+
+-#
+-#
+-#
+-#
+-# %ul
+-#   -MenuDB.new.database.each do |r|
+-#     %li=r[:name]

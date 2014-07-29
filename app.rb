@@ -33,6 +33,18 @@ class JimmysApp < Sinatra::Base
     haml :about_us
   end
 
+  get '/menu/#{:menu_number}' do
+    haml :menu, locals: {menu_number: menu_number}
+  end
+
+  get '/menu_2' do
+    haml :menu_2
+  end
+
+  get '/admin' do
+    haml :admin
+  end
+
   get '/menu_3' do
     haml :menu_3
   end
@@ -76,6 +88,22 @@ class JimmysApp < Sinatra::Base
     redirect '/'
   end
 
+  get '/edit/:item_id' do |item_id|
+    login_helper(:edit_form, item_id)
+  end
+
+  put '/:menu_item_id' do
+    MenuDB.new
+  end
+
+
+  #edit form:
+    # get '/edit/:id' do |id|
+    #   idea = IdeaStore.find(id.to_i)
+    #   erb :edit, locals: {id: id, idea: idea}
+    # end
+
+
   helpers do
     def authenticate!
       if params[:user] == "admin" && params[:password] == "password"
@@ -87,9 +115,9 @@ class JimmysApp < Sinatra::Base
       session[:user] == "admin" ? true : false
     end
 
-    def login_helper(address)
+    def login_helper(address, item_id = nil)
       if authenticated?
-        haml address
+        haml admin/address
       else
         redirect '/login'
       end

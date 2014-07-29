@@ -1,0 +1,52 @@
+id,menu,category,name,description,price
+1,Brunch,Drink It,Bottomless Mimosas,,10
+2,Brunch,Drink It,Chef Crafted Heirloom Infused Bloody Mary,,7
+3,Brunch,Drink It,ManMosa,,7
+4,Brunch,Drink It,Bartender’s Choice Shot,,5
+5,Brunch,Start It,Whiskey Maple Donuts,Housemade donuts - crown maple syrup - grand marníer syrup.,4
+6,Brunch,Start It,Chicken & Waffle Bites,Pork Belly waffle - fried chicken bites - crown maple syrup.,6
+7,Brunch,Pick It Up,Green Eggs and Lamb,Croissant - fried egg - gyro - heirloom tomato - pesto goat cheese.,9
+8,Brunch,Pick It Up,Nacho Burger,1/2lb Burger - chorizo - green chili - pepperjack mornay - black bean - fresh jalepeno.,12
+9,Brunch,Pick It Up,Hangover Cure,1/2lb Burger - fried egg - house cured bacon - cheddar cheese - Crown maple peanut butter.,11
+,,,,,
+,Regular,Shared Bites,Fried Bison Ravioli,"Packed with bison and herbs, served with our Heirloom tomato marinara.",10
+,Regular,Shared Bites,Greek Nachos,"Flash fried pita bread, hummus, gyro meat drizzled with a red pepper aioli and riata sauce.",7.50
+,Regular,Shared Bites,Hot Wings,"Chose one of our ""Award Winning"" sauces: BBQ, Original, Chipotle, Sriracha, Spicy BBQ or Melagueta.",8
+,Regular,Shared Bites,Green Chile Hummus,Black bean & Green Chili Hummus with flatbread and veggies.,7.50
+,Regular,Shared Bites,Urban House Cut Fries or Sweet Potato Puffs,House Fries or Sweet Potato Puffs,3.50
+,Regular,Shared Bites,,Ghost Fries or Ghost Puffs,4.50
+,Regular,Shared Bites,,Truffle Fries or Truffle Puffs,5.50
+,Regular,Shared Bites,,Butch Fries (truffled ghost),5.50
+,Regular,Shared Bites,Roasted Artichoke & Spinach Dip,"Roasted artichoke hearts, fresh cut spinach with Asiago cheese, served with flatbread and veggies.",8.50
+,Regular,Dinner Entrees,African Chicken & Waffles,"Our signature fried African Chicken breast with a stuffed pork belly waffle, topped with a Crown Royal Maple gravy and served with creamed spinach.",15
+,Regular,Dinner Entrees,Barnyard Mac & Cheese,Chef prepared Mac & Cheeses with your choice of green chili or bison red chile and house cured bacon.,11 (add Grilled Chicken +$3) 
+,Regular,Dinner Entrees,Citrus Blackened Mahi Mahi,"Blackened Mahi Mahi, served with caramelized onion basmati rice, citrus-bacon gastrique and chef veggies.",16
+,Regular,Dinner Entrees,Tri Pepper Sage Pork Medallions,Boneless Pork Tenderloin over tri-pepper linguini in a red pepper and artichoke pork veloute.,16
+,Regular,Salads,Heirloom Salad,"Heirloom tomatoes, fresh basil, mozzarella and Arcadian greens with a balsamic vinaigrette.",10
+,Regular,Salads,Summer Salad,"Arcadian greens, candied pecans, dried cranberries, goat cheese, tomatoes and croutons with a blueberry honey balsamic vinaigrette.",10
+,Regular,Salads,Roman Wedge,"Romaine, chef prepared Caesar dressing, house cured bacon, asiago and homemade croutons.",9
+,Regular,Blake Street Bowls,Jimmy's Jambalaya,"Old family recipe with Crawfish, Chicken, Sausage Jambalaya served with Basmati rice and flatbread.",9.50
+,Regular,Blake Street Bowls,Slow Smoked Pork Green Chili,Chef prepared green chili topped with our slow smoked pulled pork & cheddar jack cheese.,Cup $4.50 / Bowl $6.50
+,Regular,Blake Street Bowls,Kickass Bison Chili,Chef prepared chili loades with bison then topped with cheddar jack cheese.,Cup $4.50 / Bowl $6.50
+,Regular,Blake Street Bowls,Soup of the Day,Chef prepared soup.,Cup $4.50 / Bowl $6.50
+,Regular,Blake Street Bowls,The Soup Combo,BLT Flatbread & a cup of soup or chili.,9
+,Regular,Smoke House,Sexy Smoked Sow,"In-house slow smoked pork, drunken onions, wickles pickles, smoky slaw with our tangy slathering sauce on a toasted roll.",9
+,Regular,Smoke House,Killer Hickory Brisket,"In-house slow smoked brisket, drunken onions, wickles pickles, smoky slaw, served with our tangy slathering sauce on a toasted roll.",10
+,Regular,Smoke House,The Fatal Attraction,"In-house slow smoked pork and brisket, drunken onions, wickles pickles, served with our tangy slathering sauce on a toasted roll.",11
+,Regular,Chicken Sandwiches,African Chicken Sandwhich,"Spicy crispy chicken topped with lettuce, tomato, red onion, hot honey sauce and a melagueta creme.",9.50
+,Regular,Chicken Sandwiches,California Club,"Grilled chicken, topped with in-house cured bacon, avocado, lettuce, tomato, red onions, with a cranberry chipotle ranch.",10
+,Regular,Jimmy's Burger Creations,Hang Over Cure,"Fried egg, house cured bacon, cheddar cheese with a Crown Royal Maple peanut butter.",12
+,Regular,Jimmy's Burger Creations,Urban Cheese Burger,"our Choice of cheese: American, Cheddar or Pepper Jack, drunken onions, lettuce, tomato and urban sauce.",$9 (Add House Cured Bacon +$2)
+,Regular,Jimmy's Burger Creations,Bison Burger,"Topped with goat cheese, drunken onions, tomatoes, lettuce and a blueberry honey bourbon sauce.",13
+,Regular,Jimmy's Burger Creations,Cowboy Burger,"Topped with house slow smoked Brisket, cheddar jack, drunken onions, wickles, smokey slaw and our tangy slathering sauce.",12
+,Regular,Jimmy's Burger Creations,Ditka Burger,"Topped with our famous Italian beef, Provolone cheese, your choice of sweet pepers, giardinera peppers or both.",12
+,Regular,Jimmy's Burger Creations,Memphis Burger,"Topped with house slow smoked pulled pork, cheddar jack, drunken onions, wickles, smoky slaw and our tangy slathering sauce.",11
+,Regular,Jimmy's Burger Creations,Acropolis Burger,"Topped with gyros meat, goat cheese, lettuce, tomato, onions with a riata sauce.",11
+,Regular,Specialty Sandwiches,Big Jimmy's Beef,"House roasted Italian beef, thinly sliced piled high and topped with your choice of sweet peppers, giardinera peppers or both.",10
+,Regular,Specialty Sandwiches,Acropolis Naan,"Thick sliced gyros meat, heirloom tomatoes, red onions, goat cheese and riata sauce served in naan bread.",9.50
+,Regular,Specialty Sandwiches,Mahi Mahi Po Boy,"BBQ rubbed Mahi Mahi over smokey slaw, tomato, onion with a roasted red pepper aioli on brioche.",11
+,Regular,Vegetarían,Cuban Black Bean Burger,"Black beans, jalapenos, pepper jack, arcadian greens, tomato, red onions with a red pepper aioli.",9
+,Regular,Vegetarían,Heirloom Tomato Sandwich,"Heirloom tomatoes, fresh mozzarella, basil, arcadian greens with a balsamic dressing.",9
+,Regular,Desserts,The Jack & Coke,Our rich custard bread pudding topped with our house crafted Jack Daniels ice cream and homemade caramel coke syrup.,6
+,Regular,Desserts,Fried Candy Bars,"Topped with our Madagascar vanilla ice cream. Choose from Snickers, Twix, Reese's or Milky Way.",5
+,Regular,Desserts,Chocolate Avalanche,"Fried Triple Chocolate Brownie topped with Madagascar vanilla ice cream, caramel, chocolate sauce and fresh whipped cream.",7

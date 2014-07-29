@@ -4,8 +4,10 @@ require 'bundler'
 require 'haml'
 require 'csv'
 Bundler.require
-require_relative 'business_logic/contact'
+
+require_relative 'business_logic/contact_us'
 require_relative 'business_logic/menu_db'
+
 
 class JimmysApp < Sinatra::Base
   set :method_override, true

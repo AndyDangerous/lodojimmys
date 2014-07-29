@@ -11,8 +11,6 @@ To Do!
 
 Database
   views:
-    -menu item
-    -menu item (admin) - includes edit, delete
     -regular menu (admin) - include add item
     -brunch menu (admin) - include
     -admin nav

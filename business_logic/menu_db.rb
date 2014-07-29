@@ -20,6 +20,22 @@ class MenuDB
   def menu_items(category)
     database.where(:category => category)
   end
+
+  def item(item_id)
+    database.where(:id => item_id)
+  end
+
+  def menu_brunch
+    database.where(:menu => 'Brunch')
+  end
+
+  def menu_regular
+    database.where(:menu => 'Regular')
+  end
+
+  def add(data)
+    database.insert(data)
+  end
 end
 
 

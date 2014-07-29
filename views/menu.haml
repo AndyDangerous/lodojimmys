@@ -1,0 +1,7 @@
+/ Start Page Content
+#items.accordion.main_content
+  .page_heading
+    %h1= "#{menu_id}" Menu - from db
+  -MenuDB.new.categories.each do |category|
+    =haml :category_view, locals: {category: category}
+  / End Page Content

@@ -37,6 +37,18 @@ class JimmysApp < Sinatra::Base
     haml :about_us
   end
 
+  get '/menu/#{:menu_number}' do
+    haml :menu, locals: {menu_number: menu_number}
+  end
+
+  get '/menu_2' do
+    haml :menu_2
+  end
+
+  get '/admin' do
+    haml :admin
+  end
+
   get '/menu_3' do
     haml :menu_3
   end
@@ -80,13 +92,13 @@ class JimmysApp < Sinatra::Base
     redirect '/'
   end
 
-  get '/menu_2' do
-    haml :menu_2
+  get '/edit/:item_id' do |item_id|
+    login_helper(:edit_form, item_id)
   end
 
-  # get '/edit/:item_id' do |item_id|
-  #   login_helper(:edit, item_id)
-  # end
+  put '/:menu_item_id' do
+    MenuDB.new
+  end
 
 
   #edit form:
@@ -109,7 +121,7 @@ class JimmysApp < Sinatra::Base
 
     def login_helper(address, item_id = nil)
       if authenticated?
-        haml address
+        haml admin/address
       else
         redirect '/login'
       end

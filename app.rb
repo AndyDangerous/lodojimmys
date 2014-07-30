@@ -103,13 +103,13 @@ class JimmysApp < Sinatra::Base
   post '/edit/:item_id' do |item_id|
     # needs authentication
     MenuDB.new.edit(item_id, params)
-    redirect '/'
+    redirect '/admin_dashboard'
   end
 
-  delete '/edit/:item_id' do |item_id|
+  get '/delete/:item_id' do |item_id|
     # needs authentication
     MenuDB.new.delete(item_id)
-    # redirect back
+    redirect '/admin_dashboard'
   end
 
   # put '/:menu_item_id' do

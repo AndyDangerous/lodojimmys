@@ -20,7 +20,11 @@ class UserCanViewMenu < FeatureTest
   end
 
   def test_a_user_can_view_brunch_menu
-    
+    visit '/menu_4'
+    assert_equal 200, page.status_code
+    assert page.has_content?('Drink It')
+    assert page.has_content?('ManMosa')
+    assert page.has_content?('Salmon Migas')
   end
 
   def test_a_user_can_navigate_from_brunch_to_regular_menu

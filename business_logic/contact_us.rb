@@ -14,17 +14,13 @@ class ContactUs
       :body        => "Name: #{params[:name]}\n
                        Phone: #{params[:phone]}\n
                        Message:\n #{params[:message]} \n\n",
-      # :html_body   => "<a href=#{File.expand_path('./imgs')}/#{params[:attachment][:filename]}>Attachment</a>"
-      :attachments => {"#params[:attachment]}" => File.read("#{File.expand_path('./public/imgs')}"'/'"#{params[:attachment][:filename]}")}
+      :attachments => {params[:attachment][:filename] => File.read(params[:attachment][:tempfile])}
       )
   end
 
   def save_attachment(data)
-    File.open('public/imgs/' + data[:filename], "w") do |attachment|
+    File.open(File.expand_path('./public/attachments') + '/' + data[:filename], "w") do |attachment|
       attachment.write(data[:tempfile].read)
     end
   end
 end
-
-
-# :html_body   => "<a href=./public/imgs/#{params[:attachment][:filename]}>Image</a>"

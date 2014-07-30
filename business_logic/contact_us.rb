@@ -12,12 +12,10 @@ class ContactUs
       :to          => "davis.developer303@gmail.com",
       :subject     => "#{params[:subject]}",
       :body        => "Name: #{params[:name]}\n
-                      Phone: #{params[:phone]}\n
-                      Message:\n #{params[:message]} \n\n",
-      # :html_body   => "<a href=./public/imgs/#{params[:attachment][:filename]}>Image</a>"
-      # :html_body   => "<a href=#{File.expand_path(./public/imgs/)}#{params[:attachment][:filename]}>Image</a>"
-      # :attachments => {"#{params[:attachment]}" => File.read("./public/imgs/" + "#{params[:attachment][:filename]}")}
-
+                       Phone: #{params[:phone]}\n
+                       Message:\n #{params[:message]} \n\n",
+      # :html_body   => "<a href=#{File.expand_path('./imgs')}/#{params[:attachment][:filename]}>Attachment</a>"
+      :attachments => {"#params[:attachment]}" => File.read("#{File.expand_path('./public/imgs')}"'/'"#{params[:attachment][:filename]}")}
       )
   end
 
@@ -27,3 +25,6 @@ class ContactUs
     end
   end
 end
+
+
+# :html_body   => "<a href=./public/imgs/#{params[:attachment][:filename]}>Image</a>"

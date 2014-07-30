@@ -20,8 +20,6 @@ class UserCanViewMenu < FeatureTest
     assert_equal 200, page.status_code
     assert page.has_link?('Menu')
     click_link('Menu')
-    require 'pry'
-    binding.pry
     assert_equal 200, page.status_code
     assert page.has_content?('Shared Bites')
   end

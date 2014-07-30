@@ -4,7 +4,7 @@
     %h1 Regular Menu
     %h3
       Visit
-      %a{:href => "menu_4.html"} here
+      %a{:href => "/menu_4"} here
       for our Brunch Menu.
   -MenuDB.new.menu_regular.each do |category|
     =haml :category_view, locals: {category: category}

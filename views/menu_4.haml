@@ -6,7 +6,7 @@
       Served Saturday and Sunday from 10am to 3pm.
       %h3
         Visit
-        %a{:href => "menu_3.html"} here
+        %a{:href => "/menu_3"} here
         for our Regular Menu.
   -MenuDB.new.menu_brunch.each do |category|
     =haml :category_view, locals: {category: category}

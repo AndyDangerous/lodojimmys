@@ -1,26 +1,34 @@
 require_relative './feature_test_helper'
 
 class UserCanViewMenu < FeatureTest
-  def test_a_user_can_view_top_level_pages
-    visit '/'
-    assert_equal 200, page.status_code
-    assert page.has_content?('Innovative American Cuisine')
-    assert page.has_link?('About Us')
-    click_link('About Us')
-    assert_equal 200, page.status_code
-    assert page.has_content?('Reviews')
-    assert page.has_link?('Location')
-    click_link('Location')
-    assert_equal 200, page.status_code
-    assert page.has_content?('Hours & Location')
-  end
-
-  def test_a_user_can_view_menu_pages
-    visit '/'
-    assert_equal 200, page.status_code
-    assert page.has_link?('Menu')
-    click_link('Menu')
+  def test_a_user_can_view_regular_menu
+    visit '/menu_3'
     assert_equal 200, page.status_code
     assert page.has_content?('Shared Bites')
+    assert page.has_content?('Fried Bison Ravioli')
+    assert page.has_content?('Smoke House')
+    assert page.has_content?('Mahi Mahi Po Boy')
+  end
+
+  def test_a_user_can_navigate_from_regular_to_brunch_menu
+    visit '/menu_3'
+    assert_equal 200, page.status_code
+    assert page.has_link?('here')
+    click_link('here')
+    assert_equal 200, page.status_code
+    assert page.has_content?('Served Saturday')
+  end
+
+  def test_a_user_can_view_brunch_menu
+    
+  end
+
+  def test_a_user_can_navigate_from_brunch_to_regular_menu
+    visit '/menu_4'
+    assert_equal 200, page.status_code
+    assert page.has_link?('here')
+    click_link('here')
+    assert_equal 200, page.status_code
+    assert page.has_content?('Hot Wings')
   end
 end

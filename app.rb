@@ -97,19 +97,18 @@ class JimmysApp < Sinatra::Base
   end
 
   get '/edit/:item_id' do |item_id|
-    login_helper(:edit_form, item_id)
+    #currently skipping authentication for testing
+    haml :form, locals: {item_id: item_id}
   end
 
-  put '/:menu_item_id' do
-    MenuDB.new
-  end
+  # put '/:menu_item_id' do
+  #   MenuDB.new
+  # end
 
-
-  #edit form:
-    # get '/edit/:id' do |id|
-    #   idea = IdeaStore.find(id.to_i)
-    #   erb :edit, locals: {id: id, idea: idea}
-    # end
+  # get '/edit/:id' do |id|
+  #   idea = IdeaStore.find(id.to_i)
+  #   erb :edit, locals: {id: id, idea: idea}
+  # end
 
 
   helpers do
@@ -126,6 +125,11 @@ class JimmysApp < Sinatra::Base
     def login_helper(address, item_id = nil)
       if authenticated?
         haml address
+      #   if item_id
+      #     haml address locals: {item_id: item_id}
+      #   else
+      #     haml address
+      #   end
       else
         redirect '/login'
       end

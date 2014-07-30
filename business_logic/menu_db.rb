@@ -22,7 +22,8 @@ class MenuDB
   end
 
   def item(item_id)
-    database.where(:id => item_id)
+    dataset = database.where(:id => item_id)
+    dataset[:price]
   end
 
   def menu_brunch

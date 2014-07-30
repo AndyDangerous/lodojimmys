@@ -1,0 +1,11 @@
+Start Page Content
+#items.accordion.main_content
+  .page_heading
+    %h1 Regular Menu
+    %h3
+      Visit
+      %a{:href => "/menu_4"} here
+      for our Brunch Menu.
+  -MenuDB.new.menu_regular.each do |category|
+    =haml :category_view, locals: {category: category}
+  / End Page Content

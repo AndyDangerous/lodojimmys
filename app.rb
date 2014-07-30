@@ -33,9 +33,9 @@ class JimmysApp < Sinatra::Base
     haml :about_us
   end
 
-  get '/menu/#{:menu_number}' do
-    haml :menu, locals: {menu_number: menu_number}
-  end
+  # get '/menu/#{:menu_number}' do
+  #   haml :menu, locals: {menu_number: menu_number}
+  # end
 
   get '/menu_2' do
     haml :menu_2
@@ -83,26 +83,34 @@ class JimmysApp < Sinatra::Base
     login_helper(:admin_dashboard)
   end
 
+  get '/edit_brunch_menu' do
+    login_helper(:admin_menu_4)
+  end
+
+  get '/edit_regular_menu' do
+    login_helper(:admin_menu_3)
+  end
+
   get '/logout' do
     session[:user] = nil
     redirect '/'
   end
 
   get '/edit/:item_id' do |item_id|
-    login_helper(:edit_form, item_id)
+    haml :form, locals: {item_id: item_id}
   end
 
-  put '/:menu_item_id' do
-    MenuDB.new
+  post '/edit/:item_id' do |item_id|
+    # needs authentication
+    MenuDB.new.edit(item_id, params)
+    redirect '/admin_dashboard'
   end
 
-
-  #edit form:
-    # get '/edit/:id' do |id|
-    #   idea = IdeaStore.find(id.to_i)
-    #   erb :edit, locals: {id: id, idea: idea}
-    # end
-
+  get '/delete/:item_id' do |item_id|
+    # needs authentication
+    MenuDB.new.delete(item_id)
+    redirect '/admin_dashboard'
+  end
 
   helpers do
     def authenticate!
@@ -115,9 +123,9 @@ class JimmysApp < Sinatra::Base
       session[:user] == "admin" ? true : false
     end
 
-    def login_helper(address, item_id = nil)
+    def login_helper(address, locals = nil)
       if authenticated?
-        haml admin/address
+        haml address
       else
         redirect '/login'
       end

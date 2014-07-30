@@ -28,7 +28,7 @@ class AdminCanLogIn < FeatureTest
     assert_equal 200, page.status_code
     assert page.has_content?('Fork It')
     assert page.has_content?('Admin options:')
-    page.button.find('edit_menu_form_10').click
+    page.find('edit_menu_form_10').click
     # click specific edit button
     # find_by_id('edit_menu_form_10')
     # click specific delete button

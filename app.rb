@@ -33,9 +33,9 @@ class JimmysApp < Sinatra::Base
     haml :about_us
   end
 
-  get '/menu/#{:menu_number}' do
-    haml :menu, locals: {menu_number: menu_number}
-  end
+  # get '/menu/#{:menu_number}' do
+  #   haml :menu, locals: {menu_number: menu_number}
+  # end
 
   get '/menu_2' do
     haml :menu_2
@@ -97,8 +97,19 @@ class JimmysApp < Sinatra::Base
   end
 
   get '/edit/:item_id' do |item_id|
-    #currently skipping authentication for testing
     haml :form, locals: {item_id: item_id}
+  end
+
+  post '/edit/:item_id' do |item_id|
+    # needs authentication
+    MenuDB.new.edit(item_id, params)
+    redirect '/'
+  end
+
+  delete '/edit/:item_id' do |item_id|
+    # needs authentication
+    MenuDB.new.delete(item_id)
+    # redirect back
   end
 
   # put '/:menu_item_id' do
@@ -122,14 +133,9 @@ class JimmysApp < Sinatra::Base
       session[:user] == "admin" ? true : false
     end
 
-    def login_helper(address, item_id = nil)
+    def login_helper(address, locals = nil)
       if authenticated?
-        haml address
-      #   if item_id
-      #     haml address locals: {item_id: item_id}
-      #   else
-      #     haml address
-      #   end
+        haml address, locals
       else
         redirect '/login'
       end

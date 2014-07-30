@@ -1,5 +1,5 @@
-%form{action: "/#{item_id}", enctype: "multipart/form-data", method: "PUT", role: "form"}
-  -menu_item = MenuDB.new.item(item_id)
+-menu_item = MenuDB.new.item(item_id)
+%form{action: "/edit/#{menu_item[:id]}", method: "POST", role: "form"}
   .form-group
     %label{for: "Name"} Name
     %input.form-control{name: "menu_item[:name]", type: "text", value: "#{menu_item[:name]}"}/

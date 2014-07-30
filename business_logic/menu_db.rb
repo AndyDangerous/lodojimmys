@@ -22,8 +22,7 @@ class MenuDB
   end
 
   def item(item_id)
-    dataset = database.where(:id => item_id)
-    dataset[:price]
+    database.where(:id => item_id).first
   end
 
   def menu_brunch
@@ -38,5 +37,19 @@ class MenuDB
 
   def add(data)
     database.insert(data)
+  end
+
+  def edit(id, params)
+    database.where(:id => id).update(:name        => params[:name],
+                                     :description => params[:description],
+                                     :price       => params[:price])
+  end
+
+  def delete(id)
+    database.where(:id => id).delete
+  end
+
+  def add_column(name)
+    database.add_column(name, String)
   end
 end

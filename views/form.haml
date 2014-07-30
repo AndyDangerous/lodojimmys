@@ -1,0 +1,12 @@
+-menu_item = MenuDB.new.item(item_id)
+%form{action: "/edit/#{menu_item[:id]}", method: "POST", role: "form"}
+  .form-group
+    %label{for: "Name"} Name
+    %input.form-control{name: "menu_item[name]", type: "text", value: "#{menu_item[:name]}"}/
+  .form-group
+    %label{for: "Description"} Description
+    %input.form-control{name: "menu_item[description]", rows: "3", type: "textarea", value: "#{menu_item[:description]}"}
+  .form-group
+    %label{for: "price"} Price
+    %input.form-control{name: "menu_item[price]", type: "text", value: "#{menu_item[:price]}"}/
+  %button.btn.btn-default{type: "submit"} Submit

@@ -11,5 +11,5 @@
         %button.btn.btn-default{form: "delete_menu_form_#{menu_item[:id]}", type: "submit", style: "inline"} delete
         %form{action: "/edit/#{menu_item[:id]}", id: "edit_menu_form_#{menu_item[:id]}", method: "GET", style: "display:none"}
           %input{type: "submit", value: "edit"}
-        %form{action: "/delete/#{menu_item[:id]}", id: "delete_menu_form_#{menu_item[:id]}", method: "POST", style: "display:none"}
+        %form{action: "/delete/#{menu_item[:id]}", id: "delete_menu_form_#{menu_item[:id]}", method: "GET", style: "display:none"}
           %input{name: "_method", type: "hidden", value: "DELETE"}

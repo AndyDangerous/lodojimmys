@@ -1,0 +1,13 @@
+/ Start Page Content
+#items.accordion.main_content
+  .page_heading
+    %h1 Brunch Menu
+    %h2
+      Served Saturday and Sunday from 10am to 3pm.
+      %h3
+        Visit
+        %a{:href => "/menu_3"} here
+        for our Regular Menu.
+  -MenuDB.new.menu_brunch.each do |category|
+    =haml :admin_category_view, locals: {category: category}
+  / End Page Content

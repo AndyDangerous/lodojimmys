@@ -83,6 +83,14 @@ class JimmysApp < Sinatra::Base
     login_helper(:admin_dashboard)
   end
 
+  get '/edit_brunch_menu' do
+    login_helper(:admin_menu_4)
+  end
+
+  get '/edit_regular_menu' do
+    login_helper(:admin_menu_3)
+  end
+
   get '/logout' do
     session[:user] = nil
     redirect '/'
@@ -117,7 +125,7 @@ class JimmysApp < Sinatra::Base
 
     def login_helper(address, item_id = nil)
       if authenticated?
-        haml admin/address
+        haml address
       else
         redirect '/login'
       end

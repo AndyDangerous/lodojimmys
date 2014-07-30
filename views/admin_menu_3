@@ -1,4 +1,4 @@
-/ Start Page Content
+Start Page Content
 #items.accordion.main_content
   .page_heading
     %h1 Regular Menu

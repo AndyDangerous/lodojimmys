@@ -135,7 +135,7 @@ class JimmysApp < Sinatra::Base
 
     def login_helper(address, locals = nil)
       if authenticated?
-        haml address, locals
+        haml address
       else
         redirect '/login'
       end

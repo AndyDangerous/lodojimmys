@@ -40,9 +40,9 @@ class MenuDB
   end
 
   def edit(id, params)
-    database.where(:id => id).update(:name        => params[:name],
-                                     :description => params[:description],
-                                     :price       => params[:price])
+    database.where(:id => id).update(:name        => params[:menu_item][:name],
+                                     :description => params[:menu_item][:description],
+                                     :price       => params[:menu_item][:price])
   end
 
   def delete(id)

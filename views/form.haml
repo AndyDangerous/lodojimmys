@@ -10,7 +10,7 @@
       %br
     .form-group
       %label{for: "Description"} Description
-      %input.form-control{name: "menu_item[description]", rows: "3", type: "textarea", value: "#{menu_item[:description]}"}
+      %textarea.form-control{name: "menu_item[description]", rows: "3"}=menu_item[:description]
       %br
       %br
     .form-group

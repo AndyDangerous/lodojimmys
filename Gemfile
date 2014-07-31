@@ -22,4 +22,5 @@ group :test do
   gem 'rake'
   gem 'reek'
   gem 'cane'
+
 end

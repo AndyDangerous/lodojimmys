@@ -6,11 +6,11 @@ end
 
 task default: :test
 
-# require 'reek/rake/task'
-#
-# Reek::Rake::Task.new do |t|
-#   t.fail_on_error = false
-# end
+require 'reek/rake/task'
+
+Reek::Rake::Task.new do |t|
+  t.fail_on_error = false
+end
 
 namespace :sanitation do
   desc "Check line lengths & whitespace with Cane"

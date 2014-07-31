@@ -111,6 +111,15 @@ class JimmysApp < Sinatra::Base
     redirect '/admin_dashboard'
   end
 
+  get '/add_menu_item' do
+    haml :add_form
+  end
+
+  post '/add' do
+    MenuDB.new.add(params) if authenticated?
+    redirect '/admin_dashboard'
+  end
+  
   helpers do
     def authenticate!
       if params[:user] == "admin" && params[:password] == "password"

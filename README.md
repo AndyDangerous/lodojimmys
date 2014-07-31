@@ -7,6 +7,7 @@ To Do!
 [ ] edit menu
 [ ] add photo upload to email contact us
 [ ] test suite
+[ ] auto-increment table PK
 
 
 Database

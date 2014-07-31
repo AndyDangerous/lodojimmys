@@ -6,6 +6,7 @@ require 'csv'
 Bundler.require
 
 require_relative 'business_logic/contact_us'
+require_relative 'business_logic/apply'
 require_relative 'business_logic/menu_db'
 
 
@@ -47,6 +48,15 @@ class JimmysApp < Sinatra::Base
 
   post '/contact' do
     ContactUs.new(params[:contact])
+    redirect '/'
+  end
+
+  get '/application' do
+    haml :application
+  end
+
+  post '/application' do
+    Apply.new(params[:application])
     redirect '/'
   end
 

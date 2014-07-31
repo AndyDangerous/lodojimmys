@@ -1,0 +1,41 @@
+/ Start Page Content
+#application.main_content
+  .page_heading
+    %h1 Work for Jimmy's
+  .small_left_column
+    %p We are always looking for the right addition to our team! FSubmit your cover letter in the form and upload your Résumé to apply today.
+    .notice
+    %form#application_form{:action => "/application", :method => "post", :enctype => 'multipart/form-data', :role => "form"}
+      .row
+        %p
+          %label Your Name
+          %input.text_field{:name => "application[name]", :type => "text"}/
+        %p
+          %label Your Email
+          %input.text_field{:name => "application[email]", :type => "email"}/
+      .row
+        %p
+          %label Your Phone Number
+          %input.text_field{:name => "application[phone]", :type => "text"}/
+      %p
+        %label Message (Cover Letter)
+        %textarea.text_field{:cols => "10", :name => "application[message]", :rows => "10"}
+      %p
+        %label Attachment (Resume)
+        %input.text_field{:name => "application[attachment]", :type => "file"}
+      %input.button{:type => "submit", :value => "Apply!"}/
+  / end left column
+  #sidebar.large_right_column
+    #hq.container
+      %h3 Jimmy's Urban Bar and Grill
+      .content
+        %ul
+          %li.mail
+            %b By E-mail
+            %p
+              Jim@1530blake.com
+          %li.phone
+            %b By Phone
+            %p 303-298-5000
+  / end right column
+/ End Page Content

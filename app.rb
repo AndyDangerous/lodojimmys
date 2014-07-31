@@ -33,6 +33,7 @@ class JimmysApp < Sinatra::Base
     haml :about_us
   end
 
+  # clean up menu endpoints?
   # get '/menu/#{:menu_number}' do
   #   haml :menu, locals: {menu_number: menu_number}
   # end
@@ -97,18 +98,16 @@ class JimmysApp < Sinatra::Base
   end
 
   get '/edit/:item_id' do |item_id|
-    haml :form, locals: {item_id: item_id}
+    login_helper(:form, {item_id: item_id})
   end
 
   post '/edit/:item_id' do |item_id|
-    # needs authentication
-    MenuDB.new.edit(item_id, params)
+    MenuDB.new.edit(item_id, params) if authenticated?
     redirect '/admin_dashboard'
   end
 
   get '/delete/:item_id' do |item_id|
-    # needs authentication
-    MenuDB.new.delete(item_id)
+    MenuDB.new.delete(item_id) if authenticated?
     redirect '/admin_dashboard'
   end
 
@@ -123,9 +122,9 @@ class JimmysApp < Sinatra::Base
       session[:user] == "admin" ? true : false
     end
 
-    def login_helper(address, locals = nil)
+    def login_helper(view, locals = {})
       if authenticated?
-        haml address
+        haml view, locals: locals
       else
         redirect '/login'
       end

@@ -1,0 +1,55 @@
+#admin_dashboard.main_content
+  .page_heading
+    %h2 Add Menu Item
+  %form{action: "/add", method: "POST", role: "form"}
+    .form-group
+      %label{for: "Menu"} Menu:
+      %input.form-control{name: "params[menu]", type: "select"}
+      %ui
+        %li Brunch
+        %li Regular
+      -# %select
+      -#   %option{value: "Regular"} Regular
+      -#   %option{value: "Brunch"} Brunch
+      %br
+      %br
+    .form-group
+      %label{for: "Category"} Category
+      %input.form-control{name: "params[category]", type: "select"}
+      %p Brunch Menu Categories:
+      %ui
+        %li Start It
+        %li Pick It Up
+        %li Lighten Up
+        %li Fork It
+        %li Sides
+      %p Regular Menu Categories
+      %ui
+        %li Shared Bites
+        %li Dinner Entrees
+        %li Salads
+        %li Blake Street Bowls
+        %li Chicken Sandwiches
+        %li Jimmy's Burger Creations
+        %li Specialty Sandwiches
+        %li Vegetarian
+        %li Desserts
+      %br
+      %br
+    .form-group
+      %label{for: "Name"} Name
+      %input.form-control{name: "params[name]", type: "text"}
+      %br
+      %br
+    .form-group
+      %label{for: "Description"} Description
+      %input.form-control{name: "params[description]", rows: "3", type: "textarea"}
+      %br
+      %br
+    .form-group
+      %label{for: "price"} Price
+      %input.form-control{name: "params[price]", type: "text"}/
+      %br
+      %br
+      %br
+    %button.btn.btn-default{type: "submit"} Submit

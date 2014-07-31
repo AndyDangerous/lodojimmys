@@ -35,8 +35,13 @@ class MenuDB
     regular.map { |e| e[:category] }.uniq
   end
 
-  def add(data)
-    database.insert(data)
+  def add(params)
+    params = params[:params]
+    database.insert(:menu => params[:menu],
+                    :category => params[:category],
+                    :name => params[:name],
+                    :description => params[:description],
+                    :price => params[:price])
   end
 
   def edit(id, params)

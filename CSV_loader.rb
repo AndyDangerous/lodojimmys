@@ -19,13 +19,12 @@ class CSVLoader
     data = CSV.read('csv_path', headers: true, header_converters: :symbol)
 
     rows = data.each do |row|
-      @database.insert(:id => row[:id],
-                      :menu        => row[:menu],
-                      :category    => row[:category],
-                      :name        => row[:name],
-                      :description => row[:description],
-                      :price       => row[:price]
-                      )
+      @database.insert(:menu        => row[:menu],
+                       :category    => row[:category],
+                       :name        => row[:name],
+                       :description => row[:description],
+                       :price       => row[:price]
+                        )
     end
   end
 end

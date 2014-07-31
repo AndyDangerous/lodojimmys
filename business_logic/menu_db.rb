@@ -9,10 +9,6 @@ class MenuDB
     @database ||= db[:jimmys_db]
   end
 
-  def self.menus(menu)
-    database.where(:menu => menu)
-  end
-
   def categories
     database.map { |e| e[:category] }.uniq
   end

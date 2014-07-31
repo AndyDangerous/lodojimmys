@@ -7,6 +7,7 @@ gem 'pony'
 gem 'sequel'
 gem 'sqlite3'
 gem 'carrierwave'
+gem 'simplecov', :require => false, :group => :test
 
 group :development do
   gem 'shotgun'
@@ -18,4 +19,6 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'launchy'
+  gem 'rake'
+  gem 'reek'
 end

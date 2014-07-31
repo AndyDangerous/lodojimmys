@@ -3,19 +3,19 @@ README
 
 To Do!
 [ ] correct active <li> in nav
-[ ] database
-[ ] edit menu
-[ ] add photo upload to email contact us
+[x] database
+[x] edit menu
+[x] add photo upload to email contact us
 [ ] test suite
-[ ] auto-increment table PK
+[x] auto-increment table PK
 
 
 Database
   views:
-    -regular menu (admin) - include add item
-    -brunch menu (admin) - include
-    -admin nav
-    -edit/add menu item
+  x  -regular menu (admin) - include add item
+  x  -brunch menu (admin) - include
+  x  -admin nav
+  x  -edit/add menu item
 
 
 

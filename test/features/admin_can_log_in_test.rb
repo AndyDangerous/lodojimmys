@@ -14,6 +14,11 @@ class AdminCanLogIn < FeatureTest
     assert_equal 200, page.status_code
     assert page.has_link?('Edit Brunch Menu')
     assert page.has_link?('Edit Regular Menu')
+    page.has_link?("Logout")
+    click_link('Logout')
+
+    assert_equal 200, page.status_code
+    assert page.has_content?('Innovative American Cuisine')
   end
 
   def test_admin_can_edit_menu_items

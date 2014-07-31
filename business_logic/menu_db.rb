@@ -53,8 +53,4 @@ class MenuDB
   def delete(id)
     database.where(:id => id).delete
   end
-
-  def add_column(name)
-    database.add_column(name, String)
-  end
 end

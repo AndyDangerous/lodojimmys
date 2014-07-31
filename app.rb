@@ -21,29 +21,12 @@ class JimmysApp < Sinatra::Base
     haml :error
   end
 
-  get '/test' do
-    haml :test
-  end
-
   get '/' do
     haml :index
   end
 
   get '/about_us' do
     haml :about_us
-  end
-
-  # clean up menu endpoints?
-  # get '/menu/#{:menu_number}' do
-  #   haml :menu, locals: {menu_number: menu_number}
-  # end
-
-  get '/menu_2' do
-    haml :menu_2
-  end
-
-  get '/admin' do
-    haml :admin
   end
 
   get '/menu_3' do
@@ -62,13 +45,13 @@ class JimmysApp < Sinatra::Base
     haml :contact
   end
 
-  get '/login' do
-    haml :login
-  end
-
   post '/contact' do
     ContactUs.new(params[:contact])
     redirect '/'
+  end
+
+  get '/login' do
+    haml :login
   end
 
   post '/login' do
@@ -90,11 +73,6 @@ class JimmysApp < Sinatra::Base
 
   get '/edit_regular_menu' do
     login_helper(:admin_menu_3)
-  end
-
-  get '/logout' do
-    session[:user] = nil
-    redirect '/'
   end
 
   get '/edit/:item_id' do |item_id|
@@ -119,7 +97,12 @@ class JimmysApp < Sinatra::Base
     MenuDB.new.add(params) if authenticated?
     redirect '/admin_dashboard'
   end
-  
+
+  get '/logout' do
+    session[:user] = nil
+    redirect '/'
+  end
+
   helpers do
     def authenticate!
       if params[:user] == "admin" && params[:password] == "password"
